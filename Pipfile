@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+apscheduler = "==3.2.0"
+werkzeug = "==0.11.15"
+flask = "==0.12"
+requests = "==2.12.4"
+lxml = "==3.7.2"
+pymongo = "*"
+redis = "*"
+
+[dev-packages]
+pytest = "*"
+
+[requires]
+python_version = "3.6"
