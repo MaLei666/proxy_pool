@@ -1,19 +1,6 @@
 # -*- coding: utf-8 -*-
 # !/usr/bin/env python
-"""
--------------------------------------------------
-   File Name：     SsdbClient.py
-   Description :  封装SSDB操作
-   Author :       JHao
-   date：          2016/12/2
--------------------------------------------------
-   Change Activity:
-                   2016/12/2:
-                   2017/09/22: PY3中 redis-py返回的数据是bytes型
-                   2017/09/27: 修改pop()方法 返回{proxy:value}字典
--------------------------------------------------
-"""
-__author__ = 'JHao'
+
 
 from Util import EnvUtil
 
@@ -41,7 +28,7 @@ class SsdbClient(object):
         :return:
         """
         self.name = name
-        self.__conn = Redis(connection_pool=BlockingConnectionPool(host=host, port=port))
+        self.__conn = Redis(connection_pool=BlockingConnectionPool(host=host, port=port,password='zkyr1006'))
 
     def get(self, proxy):
         """
